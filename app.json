@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/member/member",
+    "pages/star/star",
+    "pages/myInfo/myInfo",
+    "pages/appointment/appointment",
+    "pages/address/address",
+    "pages/messageBox/messageBox",
+    "pages/intoShop/intoShop",
+    "pages/myInfo/nickName/nickName",
+    "pages/myInfo/myPhone/myPhone",
+    "pages/myInfo/herPhone/herPhone",
+    "pages/address/addAddress/add",
+    "pages/member/babyGift/babyGift",
+    "pages/member/motherGift/motherGift",
+    "pages/member/caratGift/caratGift",
+    "pages/messageBox/messageDetail/messageDetail",
+    "pages/star/feedBack/feedBack",
+    "pages/invite/invite",
+    "pages/giftCard/giftCard",
+    "pages/invite/inviteList/inviteList",
+    "pages/giftCard/giftCardDetail/giftCardDetail",
+    "pages/member/meetGift/meetGift",
+    "pages/member/myIntegral/myIntegral",
+    "pages/member/myDiamond/myDiamond",
+    "pages/myLover/myLover",
+    "pages/myLover/love/love",
+    "pages/webview/webview",
+    "pages/shopList/shopList",
+    "pages/member/integralCenter/integralCenter",
+    "pages/activity/guide/guide"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "玛丽莱星球",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#BCBEC0",
+    "selectedColor": "#001A88",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "images/home_blue.png",
+        "iconPath": "images/home_grey.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/vip_blue.png",
+        "iconPath": "images/vip_grey.png",
+        "pagePath": "pages/member/member",
+        "text": "会员权益"
+      },
+      {
+        "selectedIconPath": "images/mine_blue.png",
+        "iconPath": "images/mine_grey.png",
+        "pagePath": "pages/star/star",
+        "text": "我的星球"
+      }
+    ]
+  }
+}

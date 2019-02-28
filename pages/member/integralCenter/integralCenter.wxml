@@ -1,0 +1,121 @@
+<!--pages/member/integralCenter/integralCenter.wxml-->
+<view class="container {{!flag ? 'ovh' : ''}}" style='padding-bottom:30rpx;'>
+  <view wx:if="{{showExchangePage != 3}}" style='height:30rpx;'></view>
+  <view wx:if="{{showExchangePage == 1}}" style='padding:0 30rpx;'>
+    <view class='integral-info-box'>
+      <view class='integral-rule' bindtap='showRules'>积分规则</view>
+      <view class='intergral-val'>
+        <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_hyqy_02.png'></image>
+        <text>{{integral}}</text> 分
+      </view>
+      <view class='bottom-tab'>
+        <navigator hover-class='none' url="/pages/member/myIntegral/myIntegral">
+          <image src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/starDiamond/integarl/icon_detail.png' mode="widthFix"></image>
+          <text>积分明细</text>
+        </navigator>
+        <view class='line'></view>
+        <view >
+          <image src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/starDiamond/integarl/icon_exchange.png' mode="widthFix"></image>
+          <text bindtap='changePage' data-change="2">我要兑换</text>
+        </view>
+      </view>
+    </view>
+    <view class='exchange-tit'>本季兑换</view>
+    <image src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/starDiamond/exchangeBanner.png' class='bannerImg' mode="widthFix"></image>
+  </view>
+  <view wx:elif="{{showExchangePage == 2}}" style='padding:0 30rpx;'>
+    <view class='integral-info-box' style='background-image: url("http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/starDiamond/integarl/img_exchange.png");height:580rpx'>
+      <view class='intergral-val' style='height:280rpx;'>
+        <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_hyqy_02.png'></image>
+        <text>{{integral}}</text> 分
+      </view>
+      <view class='bottom-action'>
+        <view class='exchange-integral'>
+          <text>本次兑换：</text>
+          <input placeholder-style="color:#ccc" bindinput='integralInput' placeholder='请输入您要兑换的积分' type="number"></input>
+        </view>
+        <view class='exchange-integral' hidden="{{isbind}}" style='margin-top:20rpx'>
+          <text>手机号码：</text>
+          <input placeholder-style="color:#ccc" bindinput='phoneInput' maxlength='11' placeholder='请输入您的手机号码' type="number"></input>
+        </view>
+        <view class='tips' wx:if="{{showTips}}">
+          *积分不足
+        </view>
+      </view>
+    </view>
+    <view class='confrim-btn' bindtap='showExchangePageEven'>确认兑换</view>
+    <view class='backtips' bindtap='changePage' data-change="1">返回我的积分</view>
+  </view>
+  <view class='exchange-success' wx:else>
+    <view class='exs-content'>
+      <image class='logo' mode="widthFix" src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/starDiamond/logo.png'></image>
+      <view class='exs-info'>
+        <view style='display:block;'>
+          <image src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/starDiamond/integarl/icon_success.png'></image>
+        </view>
+        <view class='exs-tit'>兑换成功</view>
+        <view class='exs-code'>本次兑换码: <text>{{exchangeCode}}</text></view>
+        <view class='exs-text'>请将本页面展示给珠宝顾问</view>
+        <view class='cancel-btn' bindtap='cancelExchange'>取消兑换</view>
+      </view>
+      <view class='backtips' bindtap='changePage' data-change="1">返回我的积分</view>
+    </view>
+  </view>
+  <dialog id='popup'
+    wx:if="{{showDialog}}"
+    popup_img='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/starDiamond/integarl/icon_cancel.png'
+    title='确定要取消兑换吗？' 
+    btn_no='确认取消' 
+    btn_ok='不取消'
+    bind:error="_error"
+    bind:success="_success">
+  </dialog>
+  <!-- <view class="wx-popup" wx:if="{{showDialog}}">
+    <view class='popup-container'>
+      <image class='dialog-img' src="http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/starDiamond/integarl/icon_cancel.png"></image>
+      <view class='title'>确定要取消兑换码</view>
+      <view class='action-line'>
+        <view class='yes-btn btn' bindtap='_error'>确认取消</view>
+        <view class='no-btn btn' bindtap='_success'>不取消</view>
+      </view>
+    </view>
+  </view> -->
+  <scroll-view class="rulesDetail" hidden="{{flag}}" >
+        <view class="detail">
+            <text class="detailTop">积分规则</text>
+            <view class='text_detail'>
+              <view class="detailBox">
+                <text>1、</text>
+                <text>每天登录玛丽莱星球签到可获赠1积分；</text>
+              </view>
+              <view class="detailBox">
+                  <text>2、</text>
+                  <text>您成功邀请一名好友可获得10积分，最高累计可获得100积分；</text>
+              </view>
+              <view class="detailBox">
+                  <text>3、</text>
+                  <text>邀请的好友填写手机号完成领钻即邀请成功；</text>
+              </view>
+              <view class="detailBox">
+                  <text>4、</text>
+                  <text>您在门店或官网每消费满20元，获得1积分，</text>
+              </view>
+              <view class="detailBox">
+                  <text>5、</text>
+                  <text>您邀请的好友每消费满50元，获得1积分，上不封顶；</text>
+              </view>
+              <view class="detailBox">
+                  <text>6、</text>
+                  <text>您积分可在玛丽莱星球积分兑换区上线后开启兑换；</text>
+              </view>
+              <view class="detailBox">
+                  <text>7、</text>
+                  <text>本权益最终解释权归玛丽莱所有。</text>
+              </view>
+            </view>
+            <view class='bottom_area'>
+             <view class="detailBtn" bindtap="hide">确定</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

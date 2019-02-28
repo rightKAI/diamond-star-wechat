@@ -1,0 +1,46 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class='{{showShade? "content" : ""}}'>
+    <view style='width:100%;position:relative'>
+      <swiper autoplay="true" interval="{{interval}}" current="{{current}}" duration="{{duration}}" bindchange="swiperchange" circular="true">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item bindtap="navigateFnc" data-url="{{item.link}}">
+              <image src="{{item.imgurl}}" class="slide-image" width="749" height="900" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='currentList'>
+        <view class='{{index == swiperCurrent ? "active" : ""}}' wx:for="{{imgUrls}}"></view>
+      </view>
+    </view>
+    <view  wx:if="{{diamondNum === 0}}" class='blank'></view>
+    <view  wx:else bindtap='openCard' class='banner-03'>
+      <view>玛丽莱星球送您{{diamondNum}}分钻石</view>
+      <view>快来领取钻石吧~</view>
+    </view>
+    <view class='banner-02'>
+      <view wx:for="{{tabInfolist}}" data-love="{{index === 0? true: ''}}" data-url="{{item.link}}" bindtap='navigateFnc'>
+        <image src="{{item.imgurl}}"></image>
+        <text>{{item.subTitle}}</text>
+      </view>
+    </view>
+    <view class='bottom-banner'>
+      <!-- <navigator hover-class='none' url="{{imagesThreeLink ? '/pages/webview/webview?url='+imagesThreeLink : ''}}" > -->
+        <image src="{{imagesThree}}" data-url="{{imagesThreeLink ? '/pages/webview/webview?url='+imagesThreeLink : ''}}" bindtap='pageOpen'></image>
+      <!-- </navigator> -->
+    </view>
+  </view>
+  <view class='shade' hidden="{{!showShade}}">
+    <view class='giftCard'>
+      <image class="cardOne" mode="widthFix" src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/img_sy_07.png'></image>
+      <image class="close" bind:tap="close" mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/btn_sy_03.png" />
+      <text>恭喜！您获得{{diamondNum}}分钻石！</text>
+      <view class="userInfo">
+        <input type="number" bindinput='changeInput' placeholder="输入手机号" maxlength='11' />
+        <input type="number" bindinput="changeCode" disabled='{{keyboardFlag}}' placeholder="手机验证码" maxlength="4" />
+        <view wx:if="{{showLoginBtn}}" class="infoBtn {{btnType ? '' : 'disabledBtn'}}" bindtap="getVerifyCode">{{verifyCodeText}}</view>
+        <button open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo' wx:else class="infoBtn" >领取钻石</button>
+      </view>
+    </view>
+  </view>
+</view>

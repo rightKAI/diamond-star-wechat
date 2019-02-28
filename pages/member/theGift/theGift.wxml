@@ -1,0 +1,29 @@
+<!-- pages/member/theGift/theGift.wxml -->
+<view class="container">
+    <view class="firstPage">
+        <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/meet_gift/01.jpg"></image>
+    </view>
+    <view class="secondPage">
+        <image class="secondImg" mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/meet_gift/02.jpg"></image>
+        <view class="txt">
+            <text class="secondText">如果你已拥有甜蜜恋人</text>
+            <text class="secondText">牵手TA一起到店即可享有情侣对戒</text>
+        </view>
+        <button class="takeActivity {{checkLove==true?'':'takeShow'}}" bindtap="takePart">
+            绑定情侣
+        </button>
+        <button class="takeActivity {{checkLove==true?'takeShow':''}}" bindtap="takePart">
+            领取情侣礼
+        </button>
+    </view>
+    <view class="thirdPage {{checkLove==true?'thirdGray':''}}">
+        <image class="thirdImg" mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/meet_gift/03.jpg"></image>
+        <view class="txt">
+            <text class="thirdText">珍贵的你，终会遇见真爱你的人</text>
+            <text class="thirdText">一份见面礼，一份爱的幸运</text>
+        </view>
+        <button class="takeActivity {{checkLove==true?'thirdBtnGray':''}} thirdBtnGray" bindtap="takePart">
+            领取单身礼
+        </button>
+    </view>
+</view>

@@ -1,0 +1,103 @@
+/* pages/member/theGift/theGift.wxss */
+
+/* pages/member/babyGift/babyGift.wxss */
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+}
+
+.container view image {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.container .secondPage {
+    position: relative;
+    text-align: center
+}
+
+.container .secondPage .secondImg {
+    position: relative;
+}
+
+.container .secondPage .takeActivity {
+    position: absolute;
+    bottom: 100rpx;
+    left: 30%;
+    width: 300rpx;
+    text-align: center;
+    font-size: 30rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(150deg, rgba(11, 40, 163, 1), rgba(0, 26, 136, 1));
+    border-radius: 35rpx;
+    box-shadow: 10rpx 0rpx 20rpx rgba(11, 40, 163, 0.2);
+}
+
+.container .thirdPage .secondImg {
+    position: relative;
+}
+
+.container .thirdPage .takeActivity {
+    position: absolute;
+    bottom: 100rpx;
+    left: 30%;
+    width: 300rpx;
+    text-align: center;
+    font-size: 30rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(150deg, rgba(11, 40, 163, 1), rgba(0, 26, 136, 1));
+    border-radius: 35rpx;
+    box-shadow: 10rpx 0rpx 20rpx rgba(11, 40, 163, 0.2);
+}
+
+.container .secondPage .txt {
+    position: absolute;
+    top: 32rpx;
+}
+
+.container .secondPage .txt .secondText {
+    font-size: 36rpx;
+    display: inline-block;
+    color: rgba(51, 51, 51, 1);
+    line-height: 52rpx;
+}
+
+.container .thirdPage {
+    position: relative;
+    text-align: center
+}
+
+.container .thirdPage .txt {
+    position: absolute;
+    top: -7rpx;
+}
+
+.container .thirdPage .txt .thirdText {
+    font-size: 36rpx;
+    display: inline-block;
+    color: rgba(51, 51, 51, 1);
+    line-height: 52rpx;
+}
+
+.container .thirdGray {
+    opacity: 0.3;
+}
+
+.thirdBtnGray {
+    color: rgba(191, 191, 191, 1);
+    background: rgba(238, 238, 238, 1);
+}
+
+.takeShow {
+    display: show;
+}
+
+.takeHide {
+    display: none;
+}

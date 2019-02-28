@@ -1,0 +1,14 @@
+<!--pages/messageBox/messageDetail/messageDetail.wxml-->
+<view class='container'>
+  <view class='content'>
+    <view class='messageItem' wx:for="{{messageList}}">
+      <view class='time'>
+        {{item.create_time}}
+      </view>
+      <view class='messageDetail' >
+        <text class='title'>{{item.subject}}</text>
+        <view class='detail'>{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>

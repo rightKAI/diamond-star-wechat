@@ -1,0 +1,4 @@
+/* pages/webview/index.wxss */
+.infone{
+    width:750rpx;
+}

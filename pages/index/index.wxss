@@ -1,0 +1,221 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.currentList {
+  width: 100%;
+  margin-bottom: 23rpx;
+  position: absolute;
+  bottom: 0;
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currentList view {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .5);
+  transition: all .6s;
+}
+
+.currentList view.active {
+  width: 30rpx;
+  background: #fff;
+  border-radius: 25rpx;
+}
+
+.currentList view:not(:last-child) {
+  margin-right: 10rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+swiper {
+  width: 100%;
+  height: 900rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 900rpx;
+}
+
+.banner-02 {
+  width: 100%;
+  height: 340rpx;
+  display: flex;
+  justify-content: center;
+  align-items: flex-star;
+  padding-top: 14rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.banner-02 view {
+  width: 220rpx;
+  height: 240rpx;
+}
+.banner-02 view:nth-child(2) {
+  margin:0 20rpx;
+}
+
+.banner-02 view image {
+  width: 100%;
+  border-radius: 10rpx;
+  height: 240rpx;
+}
+
+.banner-02 view text {
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+  width: 100%;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.bottom-banner {
+  height: 533rpx;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.bottom-banner image {
+  width: 690rpx;
+  height: 450rpx;
+  border-radius: 10rpx;
+}
+
+.shade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  display: flex;
+  justify-content: center;
+}
+
+.giftCard {
+  width: 664rpx;
+  height: 910rpx;
+  background: url('https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/img_sy_01.png') no-repeat left top;
+  background-size: 100%;
+  display: block;
+  margin-top: 97rpx;
+  text-align: center;
+  position: relative;
+}
+
+.giftCard .cardOne {
+  width: 244rpx;
+  height: 129rpx;
+  display: block;
+  margin: 46rpx auto 138rpx auto;
+}
+
+.giftCard .close {
+  position: absolute;
+  right: 21rpx;
+  top: 21rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.banner-03{
+  width: 100%;
+  height: 180rpx;
+  padding: 20rpx 30rpx 0 30rpx;
+  box-sizing: border-box;
+  background: #fff url('http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/img_sy_09.png') no-repeat 30rpx 20rpx;
+  background-size: 92.5%;
+}
+.banner-03 view{
+  margin-left: 213rpx;
+}
+.banner-03 view:first-child{
+  font-size: 30rpx;
+  margin-top: 26rpx;
+  font-weight: bold;
+}
+.banner-03 view:last-child{
+  font-size: 24rpx;
+}
+
+.giftCard text {
+  display: inline-block;
+  font-size: 36rpx;
+  line-height: 34rpx;
+  color: rgba(0, 0, 0, 1);
+}
+
+.userInfo {
+  margin-top: 140rpx;
+}
+
+.userInfo input {
+  width: 500rpx;
+  height: 100rpx;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1rpx solid #e8e8e8;
+  text-align: center;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.userInfo input:first-child {
+  height: 75rpx;
+}
+.blank{
+  width: 100%;
+  height: 50rpx;
+  background: #fff;
+}
+.userInfo .infoBtn {
+  width: 500rpx;
+  height: 90rpx;
+  margin: 60rpx auto 0rpx;
+  background: linear-gradient(-60deg, rgba(11, 40, 163, 1) 0%, rgba(0, 26, 136, 1) 100%);
+  border-radius: 45rpx;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  box-shadow: 10rpx 0rpx 20rpx rgba(11, 40, 163, 0.2);
+}
+.disabledBtn{
+  opacity: .3;
+}

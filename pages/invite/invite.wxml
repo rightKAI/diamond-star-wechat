@@ -1,0 +1,75 @@
+<!--pages/invite/invite.wxml-->
+<view class='container3' style='{{showInviteCard? "height:100vh;overflow:hidden;" : ""}}'>
+  <!-- <view wx:if="{{inviteList.length<=0}}" class='emptyPage'>
+    <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_wdxq_14.png'></image>
+    <text class='bigText'>您还没有邀请哦</text>
+    <text class='normalText'>快去呼唤小伙伴吧，一起领好礼~</text>
+    <button class='appointment_btn' bindtap='inviteShow'>邀请好友</button>
+  </view> -->
+  <view>
+    <view class='topbg {{memberInfo.diamondStatus? "freezeBg" : ""}}'>
+      <view class='grade'>
+        <text class='big'>{{memberInfo.diamond || 0}}</text>
+        <text>分</text>
+      </view>
+      <view class='mine_diamond'>{{memberInfo.diamondStatus? "我的钻石【冻结中】": "我的钻石"}}
+        <view bindtap='openTips' class='{{memberInfo.diamondStatus? "tip" : ""}}'></view>
+      </view>
+      <view class='user_logo'>
+        <image src='{{userInfo.iconUrl}}'></image>
+      </view>
+    </view>
+    <view class='mine_invite'>
+      <view class='line'></view>
+      <view class='title'>我的邀请</view>
+      <view class='line'></view>
+    </view>
+    <view class='invite_list'>
+      <view wx:if="{{inviteList.length>0}}">
+        <image wx:for="{{inviteList}}" src='{{item.icon_url}}'></image>
+        <image bindtap='toList' src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/btn_sy_01.png'></image>
+      </view>
+      <text wx:else class='inviteNone'>暂无邀请哦~成功邀请3个好友，拿三分钻石！</text>
+    </view>
+    <view class='activity_detail'>
+      <view class='title'>活动说明</view>
+      <view class='detail'>
+        <text>1、</text>
+        <text>成功邀请一位好友送1分钻石，最高送3分;</text>
+      </view>
+      <view class='detail'>
+        <text>2、</text>
+        <text>直接前往门店兑换镶嵌钻饰，需补金费和工费；</text>
+      </view>
+      <view class='detail'>
+        <text>3、</text>
+        <text>钻石在兑换期间，将处于冻结状态;兑换结束后，钻石减去兑换的分数；</text>
+      </view>
+      <view class='detail'>
+        <text>4、</text>
+        <text>本活动最终解释权，归玛丽莱钻石所有。</text>
+      </view>
+    </view>
+    <view class='buttonBox'>
+      <view class='invite_btn' bindtap='inviteShow' wx:if="{{!showInviteCard}}">
+      生成海报
+      </view>
+      <button class='invite_btn bg' open-type="share"  wx:if="{{!showInviteCard}}">
+        即刻邀请
+      </button>
+    </view>
+    <view class='changeTitle'>钻石定制专区</view>
+    <view bindtap='navigateFnc'  data-key="change" data-url="/pages/intoShop/intoShop?diamondChange=钻石兑换&activitySn=10001&app=true">
+      <image mode="widthFix" class='changeImg'  wx:for='{{diamondChange}}' src="{{item.imgurl}}"></image>
+    </view>
+  </view>
+  <view class='inviteCode'   wx:if="{{showInviteCard}}">
+    <view class='invite_code'>
+      <canvas canvas-id='inviteCode' wx:if="{{canvasShow}}" bindtap="closeCard" style='width:664rpx;height:910rpx;'></canvas>
+      <image src='{{preurl}}' wx:else style='width:664rpx;height:910rpx;' bindtap="closeCard"></image>
+    </view>
+    <view class='saveInviteImage' data-flag="{{true}}" bindtap='saveImage'>
+      保存图片,送朋友五分钻石
+    </view>
+  </view>
+</view>

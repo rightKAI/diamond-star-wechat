@@ -1,0 +1,211 @@
+/* pages/giftCard/giftCardDetail/giftCardDetail.wxss */
+.content{
+  border-top: 1rpx solid #cdcdcd;
+  width: 100%;
+  padding-bottom: 124rpx;
+}
+.top_banner{
+  width: 100%;
+  height: 900rpx;
+  vertical-align: middle;
+}
+.activity_detail{
+  width: 100%;
+  height: auto;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+.activity_detail .title{
+  font-size: 42rpx;
+  color: #000;
+  text-align: center;
+  margin-top: 66rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+}
+.detail{
+  margin-top: 26rpx;
+  font-size: 26rpx;
+  display: flex;
+  justify-items: center;
+}
+.card_item{
+  display: block;
+  width: 690rpx;
+  height: 220rpx;
+  background: url('https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/img_wdxq_zzlq_01.png') no-repeat left top;
+  background-size: 100%;
+  margin: 0 auto;
+  margin-top: 60rpx;
+  position: relative;
+}
+.card_right{
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.card_name{
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 48rpx;
+  overflow: hidden;/*超出部分隐藏*/
+  white-space: nowrap;/*不换行*/
+  text-overflow:ellipsis;/*超出部分文字以...显示*/
+  margin-right: 20rpx;
+}
+.card_num{
+  font-size:26rpx;
+  font-family:PingFang-SC-Medium;
+  color:rgba(245,40,73,1);
+  width:240rpx;
+  height:60rpx;
+  background:rgba(238,238,238,1);
+  border-radius:6rpx;
+  display: block;
+  margin: 15rpx auto;
+  line-height: 60rpx;
+  text-align: center;
+}
+.getGift_btn{
+  width:500rpx;
+  height:90rpx;
+  background:linear-gradient(150deg,rgba(11,40,163,1),rgba(0,26,136,1));
+  border-radius:45rpx;
+  box-shadow:10rpx 0rpx 20rpx rgba(11,40,163,0.2);
+  display: block;
+  margin: 0 auto;
+  margin-top: 60rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.appintment_card{
+  width:690rpx;
+  height:732rpx;
+  background:rgba(255,255,255,1);
+  border-radius:10rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  box-shadow:2rpx 0rpx 10rpx rgba(105,114,227,0.1);
+  position: relative;
+}
+.appintment_card:after{
+  content: '';
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background: #F6F8FE;
+  top: 380rpx;
+  left: 0;
+  transform: translateX(-50%);
+}
+.appintment_card:before{
+  content: '';
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background: #F6F8FE;
+  top: 380rpx;
+  right: 0;
+  transform: translateX(50%);
+}
+.appintment_card image{
+  width: 100%;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.appintment_time{
+  height: 103rpx;
+  line-height: 103rpx;
+  width: 100%;
+  border-bottom: 1px dashed #eee;
+  font-size:36rpx;
+  text-align: center;
+  font-family:PingFang-SC-Medium;
+}
+.sotre_bg{
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  overflow: hidden;
+}
+.sotre_bg image{
+  height: 330rpx !important;
+}
+.shop_name{
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-size: 42rpx;
+  z-index: 111;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.marginzero{
+  margin: 0 !important;
+}
+.appointment_detail{
+  font-size: 26rpx;
+  margin-top: 26rpx;
+  width: 100%;
+  overflow: hidden;/*超出部分隐藏*/
+  white-space: nowrap;/*不换行*/
+  text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+.appointment_detail_box{
+  box-sizing: border-box;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30rpx 59rpx 20rpx 82rpx;
+}
+.colorRed{
+  color: #F52849;
+}
+.action{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  box-sizing: borer-box;
+  justify-content: center;
+  position:absolute;
+  bottom:50rpx;
+}
+.action view{
+  width:240rpx;
+  height:70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  border-radius:35rpx;
+}
+.action view:first-child{
+  margin-right: 10%;
+}
+.cancel_appointment{
+  background:rgba(255,255,255,1);
+  box-shadow:5rpx 0rpx 20rpx rgba(11,40,163,0.1);
+}
+.comeTo_appointment{
+  background:linear-gradient(150deg,rgba(11,40,163,1),rgba(0,26,136,1));
+  box-shadow:10px 0px 20px rgba(11,40,163,0.2);
+  color: #fff;
+}
+.disabledBtn{
+  width:300rpx;
+  height:70rpx;
+  background:rgba(238,238,238,1);
+  border-radius:35rpx;
+  color:#BFBFBF;
+}
+.disabledCard{
+  opacity: .5;
+}

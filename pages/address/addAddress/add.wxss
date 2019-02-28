@@ -1,0 +1,88 @@
+/* pages/address/addAddress/add.wxss */
+.content{
+  width: 100%;
+  border-top: 1rpx solid #d9d9d9;
+  padding-top: 31rpx;
+}
+.addBox{
+  width: 690rpx;
+  height: 460rpx;
+  background: #fff;
+  border-radius:10rpx;
+  box-shadow:2rpx 0rpx 10rpx rgba(105,114,227,0.08);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%)
+}
+input{
+  width: 570rpx;
+  height: 100rpx;
+  border: none;
+  font-size: 30rpx;
+  color: #000;
+  border-bottom: 1rpx solid #efefef;
+}
+.inputBox{
+  width: 570rpx;
+  height: 100rpx;
+  position: relative;
+}
+.delete{
+  position: absolute;
+  right: 0;
+  top: 30rpx;
+  width: 34rpx;
+  height: 34rpx;
+  border: none;
+  background: url('https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/btn_wdxq_01.png') no-repeat right center;
+  background-size: 100% 100%;
+  z-index: 111;
+}
+.addressChoose{
+  height: 100rpx;
+  width: 570rpx;
+  font-size: 30rpx;
+  color:  #bfbfbf;
+  line-height: 100rpx;
+  background: url('https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_wdxq_09.png') no-repeat right center ;
+  background-size: 26rpx;
+  border-bottom: 1rpx solid #efefef;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.active{
+  color: #000 !important;
+}
+.addressChoose text{
+  margin-right: 34rpx;
+}
+.addressChoose text:not(:first-child){
+  margin-right: 10rpx;
+}
+.address_detail{
+  height: 120rpx;
+  margin-top: 30rpx;
+  width: 570rpx;
+  color: #000;
+  font-size: 30rpx;
+}
+.addBtn{
+  width:500rpx;
+  height:90rpx;
+  background:linear-gradient(150deg,rgba(11,40,163,1),rgba(0,26,136,1));
+  border-radius:45rpx;
+  box-shadow:10rpx 0rpx 20rpx rgba(11,40,163,0.2);
+  display: block;
+  margin: 0 auto;
+  margin-top: 60rpx;
+  font-family:PingFang-SC-Regular;
+  color: #fff;
+  font-size: 32rpx;
+  letter-spacing: 5rpx;
+  line-height: 90rpx;
+}

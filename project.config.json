@@ -1,0 +1,210 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wx189c940ea528047d",
+	"projectname": "starDiamond",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 27,
+			"list": [
+				{
+					"id": -1,
+					"name": "会员权益",
+					"pathName": "pages/member/member",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的星球",
+					"pathName": "pages/star/star",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人资料",
+					"pathName": "pages/myInfo/myInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的预约",
+					"pathName": "pages/appointment/appointment",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的地址",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "消息中心",
+					"pathName": "pages/messageBox/messageBox",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "预约进店",
+					"pathName": "pages/intoShop/intoShop",
+					"query": "activitySn=10007"
+				},
+				{
+					"id": -1,
+					"name": "活动页",
+					"pathName": "pages/activity/activity",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "设置昵称",
+					"pathName": "pages/myInfo/nickName/nickName",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "会员权益",
+					"pathName": "pages/member/member",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "添加地址",
+					"pathName": "pages/address/addAddress/add",
+					"query": "addressInfo=367"
+				},
+				{
+					"id": 12,
+					"name": "消息详情",
+					"pathName": "pages/messageBox/messageDetail/messageDetail",
+					"query": ""
+				},
+				{
+					"id": 12,
+					"name": "母亲礼",
+					"pathName": "pages/member/motherGift/motherGift",
+					"query": "activitySn=10005"
+				},
+				{
+					"id": 13,
+					"name": "宝宝礼",
+					"pathName": "pages/member/babyGift/babyGift",
+					"query": "activitySn=10008"
+				},
+				{
+					"id": 14,
+					"name": "克拉礼",
+					"pathName": "pages/member/caratGift/caratGift",
+					"query": "activitySn=10006"
+				},
+				{
+					"id": 15,
+					"name": "我的邀请",
+					"pathName": "pages/invite/invite",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的礼券",
+					"pathName": "pages/giftCard/giftCard",
+					"query": ""
+				},
+				{
+					"id": 17,
+					"name": "礼券详情",
+					"pathName": "pages/giftCard/giftCardDetail/giftCardDetail",
+					"query": "activityId=2&activitySn=10005&isAppointment=1&id=624"
+				},
+				{
+					"id": -1,
+					"name": "意见反馈",
+					"pathName": "pages/star/feedBack/feedBack",
+					"query": ""
+				},
+				{
+					"id": 19,
+					"name": "见面礼",
+					"pathName": "pages/member/meetGift/meetGift",
+					"query": "activitySn=10007"
+				},
+				{
+					"id": -1,
+					"name": "我的钻石",
+					"pathName": "pages/member/myDiamond/myDiamond",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的积分",
+					"pathName": "pages/member/myIntegral/myIntegral",
+					"query": ""
+				},
+				{
+					"id": 22,
+					"name": "绑定爱人",
+					"pathName": "pages/myLover/myLover",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的爱人已绑定",
+					"pathName": "pages/myLover/love/love",
+					"query": ""
+				},
+				{
+					"id": 24,
+					"name": "门店列表",
+					"pathName": "pages/shopList/shopList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新人指引页面",
+					"pathName": "pages/activity/guide/guide",
+					"query": ""
+				},
+				{
+					"id": 26,
+					"name": "邀请页面",
+					"pathName": "pages/index/index",
+					"query": "scene=3564465"
+				},
+				{
+					"id": -1,
+					"name": "积分中心",
+					"pathName": "pages/member/integralCenter/integralCenter",
+					"scene": null
+				}
+			]
+		}
+	}
+}

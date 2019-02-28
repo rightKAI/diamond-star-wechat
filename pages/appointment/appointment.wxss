@@ -1,0 +1,140 @@
+/* pages/appointment/appointment.wxss */
+view{
+  box-sizing: border-box;
+}
+.content{
+  padding: 30rpx;
+  padding-bottom: 115rpx;
+}
+.appintment_card{
+  width:690rpx;
+  height:732rpx;
+  background:rgba(255,255,255,1);
+  border-radius:10rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  box-shadow:2rpx 0rpx 10rpx rgba(105,114,227,0.1);
+  position: relative;
+}
+.appintment_card:after{
+  content: '';
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background: #F6F8FE;
+  top: 380rpx;
+  left: 0;
+  transform: translateX(-50%);
+}
+.appintment_card:before{
+  content: '';
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background: #F6F8FE;
+  top: 380rpx;
+  right: 0;
+  transform: translateX(50%);
+}
+.appintment_card image{
+  width: 100%;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.appintment_time{
+  height: 103rpx;
+  line-height: 103rpx;
+  width: 100%;
+  border-bottom: 1px dashed #eee;
+  font-size:36rpx;
+  text-align: center;
+  font-family:PingFang-SC-Medium;
+}
+.sotre_bg{
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  overflow: hidden;
+}
+.shop_name{
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-size: 42rpx;
+  z-index: 111;
+  width: 100%;
+  height: 110rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  line-height: 110rpx;
+}
+.marginzero{
+  margin: 0 !important;
+}
+.appointment_detail_box{
+  box-sizing: border-box;
+  padding: 30rpx 59rpx 20rpx 82rpx;
+  height: 220rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.appointment_detail{
+  font-size: 26rpx;
+  display: block;
+  overflow: hidden;/*超出部分隐藏*/
+  width: 100%;
+  white-space: nowrap;/*不换行*/
+  text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+.colorRed{
+  color: #F52849;
+}
+.action{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  box-sizing: borer-box;
+  justify-content: center;
+  position: absolute;
+  bottom: 50rpx;
+}
+.action view{
+  width:240rpx;
+  height:70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  border-radius:35rpx;
+}
+.action view:nth-child(2){
+  margin-left: 10%;
+}
+.cancel_appointment{
+  background:rgba(255,255,255,1);
+  box-shadow:5rpx 0rpx 20rpx rgba(11,40,163,0.1);
+}
+.comeTo_appointment{
+  background:linear-gradient(150deg,rgba(11,40,163,1),rgba(0,26,136,1));
+  box-shadow:10px 0px 20px rgba(11,40,163,0.2);
+  color: #fff;
+}
+.disabledCard{
+  opacity: .5;
+}
+.disabledBtn{
+  width:300rpx;
+  height:70rpx;
+  background:rgba(238,238,238,1);
+  border-radius:35rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #bfbfbf;
+  font-size: 30rpx;
+}
+
+

@@ -1,0 +1,17 @@
+<view class='container2' style='position:relative'>
+  <view>
+    <image class='banner' mode="widthFix" src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/lover/img_sy_06.png'></image>
+    <view class='bottomForm'>
+      <form  bindsubmit='bindLover'>
+        <input name="nickName" placeholder-class='colorGrey' placeholder='TA的姓名'></input>
+        <input name="phoneNumber" placeholder-class='colorGrey' maxlength='11' placeholder='TA的电话'></input>
+        <picker mode="date"   bindchange="appointmentDate">
+          <input name="birthDay" disabled='disabled' value="{{appointmentDate}}" placeholder-class='colorGrey' placeholder='TA的生日'></input>
+        </picker>
+        <button  form-type='submit' class='bindBtn'>
+          绑定TA
+        </button >
+      </form>
+    </view>
+  </view>
+</view>

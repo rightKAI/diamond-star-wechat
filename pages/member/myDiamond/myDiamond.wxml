@@ -1,0 +1,75 @@
+<!-- pages/member/myDiamond/myDiamond.wxml -->
+<view class="container">
+    <view class="content-top">
+        <text class="viewRule" bindtap="showPop">查看规则</text>
+        <!-- <view class="center">
+            <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_hyqy_01.png"></image>
+            <text class="grade">{{diamond}}</text>
+            <text class="fen removeAlign">分</text>
+        </view> -->
+        <view class="freeze">
+            <image mode="widthFix" src="{{diamondInfo.diamondStatus?'https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_hyqy_01_02.png':'http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_hyqy_01.png'}}"></image>
+            <text class="grade {{diamondInfo.diamondStatus?'grey':''}}">{{diamondInfo.diamond || 0}}</text>
+            <text class="fen removeAlign {{diamondInfo.diamondStatus?'grey':''}}">分</text>
+            <text class="freezing removeAlign" wx:if="{{diamondInfo.diamondStatus}}">【冻结中】</text>
+            <image wx:if="{{diamondInfo.diamondStatus}}" class="icon removeAlign" bind:tap="showIcon" mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/btn_hyqy_01.png"></image>
+        </view>
+    </view>
+    <view class="content-bottom">
+        <block wx:for="{{list}}" wx:key="id">
+            <view class="detailList">
+                <text class="dot"></text>
+                <text class="registerFree">{{item.title}}</text>
+                <text class="add">{{item.diamondrNum}}</text>
+                <view class="dataBox">
+                    <text class="data">{{item.createTime}}</text>
+                </view>
+                <text class="line"></text>
+            </view>
+        </block>
+    </view>
+    <view>
+      <navigator wx:if="{{diamondInfo.diamond > 0}}" class='btn_appointment' hover-class='none' url="/pages/intoShop/intoShop?diamondChange=钻石兑换&activitySn=10001&app=true">
+        预约进店
+      </navigator>
+      <navigator  wx:else  class='btn_appointment' hover-class='none' url="/pages/invite/invite">
+        邀请好友　获得钻石
+      </navigator>
+    </view>
+    <scroll-view class="rulesDetail" hidden="{{flag}}" >
+        <view class="detail">
+            <text class="detailTop">钻石规则</text>
+            <view class='text_detail'>
+              <view class="detailBox">
+                <text>1、</text>
+                <text>加入玛丽莱星球，即可随机获得2~5分钻石；</text>
+              </view>
+              <view class="detailBox">
+                  <text>2、</text>
+                  <text>成功邀请好友领钻您可获得1分钻石，最高得3分；</text>
+              </view>
+              <view class="detailBox">
+                  <text>3、</text>
+                  <text>兑换的钻石可兑换定制指定钻饰，仅需支付定制费或差价，具体可咨询客服；</text>
+              </view>
+              <view class="detailBox">
+                  <text>4、</text>
+                  <text>兑换的钻石未定制前将暂存在玛丽来门店，兑换期间线上钻石会被冻结；</text>
+              </view>
+              <view class="detailBox">
+                  <text>5、</text>
+                  <text>本权益最终解释权归玛丽莱所有</text>
+              </view>
+            </view>
+            <view class='bottom_area'>
+             <view class="detailBtn" bindtap="hide">确定</view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="showFreeze" style="display:none">
+        <view class="contentFreeze">
+            <text>您的钻石正在兑换中，兑换期间会冻结，如需解冻</text>
+            <text class="jumpFeedback">可联系我们>>></text>
+        </view>
+    </view>
+</view>

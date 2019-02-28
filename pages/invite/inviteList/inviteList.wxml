@@ -1,0 +1,31 @@
+<!--pages/invite/inviteList/inviteList.wxml-->
+<view class='container2'>
+  <view class='content'>
+    <view class='inviteList'>
+      <view class='inviteItem' wx:for="{{inviteList}}">
+        <view style='' class='numItem'>
+          <image wx:if="{{item.imgNum}}" mode="widthFix" class='itemNum' src='{{item.imgNum}}'></image>
+          <view class='textNum' wx:if="{{!item.imgNum}}">{{index+1}}</view>
+        </view>
+        <view class='item_info'>
+          <view class='itemLogo'>
+            <image src='{{item.crown}}'></image>
+            <image src='{{item.icon_url}}'></image>
+          </view>
+          <view class='itemtext'>
+            <text class='item_name'>{{item.nick_name}}</text>
+            <text class='item_time'>{{item.create_time}}</text>
+          </view>
+          <view class='itemRebate'>
+            <text class='rebate_integral'>积分+{{item.integral_num}}</text>
+            <text wx:if="{{item.diamond_num && item.diamond_num !== 0}}" class='rebate_diamond'>钻石+{{item.diamond_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='inviteBtn'>
+      邀请好友
+    </view>
+    <view class='tipText'> 温馨提示：亲爱的，如果邀请已超过10位超出的好友将不再送积分~</view>
+  </view>
+</view>

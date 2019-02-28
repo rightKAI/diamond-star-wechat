@@ -1,0 +1,34 @@
+<!--pages/myLover/love/love.wxml-->
+<view class='container2'>
+  <view class='loverCard'>
+    <view class='cardInfo'>
+      <view class='lover_name'>我的恋人：{{loverInfo.name}}</view>
+      <view class='line'></view>
+      <view>TEL：{{newPhone}}</view>
+      <view>BD：{{loverInfo.createTime}}</view>
+      <view class='untie' bindtap='showConfirm'>解绑 ></view>
+    </view>
+  </view>
+  <view class='activity'>
+    <view class='activity_card' wx:for="{{activityPage}}">
+      <navigator hover-class="none" url="{{item.pageUrl}}">
+        <image src='{{item.imgurl}}'></image>
+        <text>{{item.subTitle}}</text>
+      </navigator>
+    </view>
+  </view>
+  <navigator  open-type="switchTab"  class='btn' hover-class="none" url="/pages/member/member">
+    <view>更多权益</view>
+  </navigator>
+  <view class='shade' wx:if="{{untieFlag}}">
+      <view class='shade_content'>
+        <image class='shade_icon' src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/lover/icon_sy_04.png'></image>
+        <view class='title'>爱TA，就不要轻易放手</view>
+        <view class='title2'>真的要解绑吗？</view>
+        <view class='action'>
+          <view bindtap='untieTap'>解绑</view>
+          <view bindtap='cancelTap'>取消</view>
+        </view>
+      </view>
+  </view>
+</view>

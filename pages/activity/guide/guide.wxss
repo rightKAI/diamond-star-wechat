@@ -1,0 +1,21 @@
+/* pages/activity/guide/guide.wxss */
+.activityContent image{
+  width: 100%;
+}
+.item{
+  position: relative;
+}
+.item .btn{
+  position: absolute;
+  height: 70rpx;
+  width: 300rpx;
+  background:linear-gradient(-60deg,rgba(11,40,163,1) 0%,rgba(0,26,136,1) 100%);
+  bottom: 11%;
+  border-radius: 35rpx;
+  box-shadow:10rpx 0px 20rpx rgba(11,40,163,0.2);
+  color: #fff;
+  line-height: 70rpx;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%)
+}

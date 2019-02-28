@@ -1,0 +1,10 @@
+<!-- pages/star/feedBack/feedBack.wxml -->
+<view class="container">
+    <view class="page-section">
+        <view class="textarea-wrp">
+            <textarea auto-focus="true" value="{{value}}" bindinput="numAdd" maxlength="{{max}}" class="textarea_text" placeholder="对我们的服务，您有更好的建议吗？您还希望在玛丽莱星球上兑换什么礼物呢？请告诉我们..." />
+            <text class="numcount">{{minNum}}/{{max}}</text>
+        </view>
+    </view>
+    <button class="submitFeedBack" bindtap="submitBack">提交反馈</button>
+</view>

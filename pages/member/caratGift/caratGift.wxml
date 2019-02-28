@@ -1,0 +1,45 @@
+<!-- pages/member/caratGift/caratGift.wxml -->
+<view class="container">
+    <view class="firstPage">
+        <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/carat_gift/01.jpg"></image>
+    </view>
+    <view class="secondPage">
+        <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/carat_gift/02.jpg"></image>
+    </view>
+    <view class="thirdPage">
+        <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/carat_gift/03.jpg"></image>
+    </view>
+    <view class="fourthPage">
+        <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/carat_gift/04.jpg"></image>
+    </view>
+    <view class="activityDescription">
+        <text class="description">活动说明</text>
+        <view class="detailBox" wx:for="{{description}}">
+            <text>{{index+1}}、</text>
+            <text>{{item}}</text>
+        </view>
+    </view>
+    <view class="content" wx:if="{{bookingStatus === 0}}">
+        <image mode="widthFix" src='{{img_url}}'></image>
+        <view class='appintmentBox'>
+        <view class='title'>
+            <view class='title_Shop'>{{title_Shop}}</view>
+            <view class='details'>
+                <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/time.png' class='icon_01'></image>
+                <view>{{openTime}}-{{closeTime}}（节假日营业）</view>
+                <view>已有 {{appointmentCount}} 人预约</view>
+            </view>
+        </view>
+            <input name="nickName" bindinput="username" value="{{appointmentName}}" placeholder='您希望我们怎么称呼您' placeholder-class="placeholder_input"></input>
+            <input name='phone' bindinput="phone" type='number' maxlength='11' placeholder='手机号码' placeholder-class="placeholder_input"></input>
+            <picker mode="date" value="{{appointmentDate}}" bindchange="appointmentDate">
+                <input name="appointmentDate" decode="true" disabled='disabled' value="{{appointmentDate}}" placeholder="请输入日期"></input>
+            </picker>
+            <view class='btn' bindtap="send">预约进店</view>
+            <navigator hover-class='none' url="/pages/shopList/shopList">
+                <text class='chooseAnotherOne'>选择其他门店></text>
+            </navigator>
+        </view>
+    </view>
+    <navigator class="isAppintment" wx:if="{{bookingStatus === 1}}" hover-class='none' url="/pages/appointment/appointment">查看我的预约列表</navigator>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/messageBox/messageBox.wxml-->
+<view class='container1'>
+    <view class='content'>
+      <view class='messageItem' wx:for="{{messageList}}">
+        <view class='icon'>
+          <image src='{{item.icon_img}}'></image>
+          <view class='hasNew' wx-show="{{item.is_read === 0}}"></view>
+        </view>
+        <view class='textTip'>
+          <view>
+            {{item.title}}
+          </view>
+          <view>
+            {{item.subject}}
+          </view>
+        </view>
+        <view class='messageTime'>
+          {{item.create_time}}
+        </view>
+      </view>
+    </view>
+</view>

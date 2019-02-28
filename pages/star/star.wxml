@@ -1,0 +1,77 @@
+<!-- pages/star/star.wxml -->
+<view class='container'>
+<view class='header'>
+  <image class='header-bg' src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/mine_bg.jpg'></image>
+  <view class='userInfo'>
+    <view class='user-logo'>
+      <view class='navi' bindtap='navigateFnc' data-url="/pages/myInfo/myInfo">
+        <image src='{{memberInfo.iconUrl ? memberInfo.iconUrl : "https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/user_logo.png"}}'></image>
+      </view>
+    </view>
+    <text class='user-name'>{{memberInfo.nickName ? memberInfo.nickName : '星球居民'}}</text>
+    <button class='signIn' wx:if="{{!isLogin}}" open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>
+      点击登录
+    </button>
+    <view class='signInBox'>
+      <view class='signIn {{isAdd ? "greyBtn" : ""}}' wx:if="{{isLogin}}" bindtap='addOne'>
+        {{isAdd ? '已签到' : '签到'}}
+      </view>
+      <text wx:if="{{showAddNum}}" animation="{{animation}}">+1</text>
+    </view>
+    <!-- <view class='user-level'>
+        账户等级：
+        <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_diamond.png' mode="widthFix"></image>
+        <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_diamond.png' mode="widthFix"></image>
+        <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_diamond.png' mode="widthFix"></image>
+        <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_diamond.png' mode="widthFix"></image>
+    </view> -->
+    <view  data-url="/pages/messageBox/messageDetail/messageDetail" bindtap='navigateFnc' class='message'>
+      <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_news.png'></image>
+      <view class='tip1' wx:if="{{isLogin && memberInfo.msgNum !== 0}}">
+        {{memberInfo.msgNum >=100 ? '...': memberInfo.msgNum}}
+      </view>
+    </view>
+  </view>
+  <view class='navigation'>
+    <view  data-url="{{item.navigatorUrl}}" bindtap='navigateFnc' class='navigation_item' wx:for="{{tabList}}">
+      <image mode="widthFix" src='{{item.imgUrl}}'></image>
+      <view class=' {{item.tipNum ? item.tipNum < 10 ? "tipOne" : "tabTip" : "" }}'>
+        {{item.tipNum >0 ? item.tipNum : ""}}
+      </view>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</view>
+<view class='blank'></view>
+<view class='userInfoBox'>
+  <view class='rowSet'>
+    <image mode="widthFix" src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_wdxq_06.png'></image>
+    <view class='titleSecond noLine' bindtap='navigateFnc' data-love="{{true}}"  data-url="/pages/myLover/myLover">
+      <text class='titleThree'>我的爱人</text>
+      <view class='move'>
+        <view class='tip' wx:if="{{!checkLove}}"></view>
+        <image class='nextImage' mode="widthFix" src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_next.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='blank'></view>
+  <view class='rowSet'>
+    <image mode="widthFix" src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_wdxq_07.png'></image>
+    <view class='titleSecond' bindtap='navigateFnc' data-key="address"  data-url="/pages/address/address">
+      <text class='titleThree'>我的地址</text>
+      <view class='move'>
+        <image class='nextImage' mode="widthFix" src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_next.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='rowSet'>
+    <image mode="widthFix" src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_wdxq_08.png'></image>
+    <view class='titleSecond noLine' bindtap='navigateFnc'  data-url="/pages/star/feedBack/feedBack">
+      <text class='titleThree'>意见反馈</text>
+      <view class='move'>
+        <image class='nextImage' mode="widthFix" src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_next.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

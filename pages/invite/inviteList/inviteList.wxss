@@ -1,0 +1,160 @@
+/* pages/invite/inviteList/inviteList.wxss */
+.content{
+  width: 100%;
+  height: 100%;
+  padding-top: 30rpx;
+}
+.inviteList{
+  width: 690rpx;
+  height: 960rpx;
+  background: #fff;
+  border-radius:10rpx;
+  box-shadow:2rpx 0px 10rpx rgba(105,114,227,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  justify-content: center;
+  margin: 0 auto;
+}
+.inviteItem{
+  height: 160rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemNum{
+  width: 60rpx;
+  height: 60rpx;
+  display: block;
+  margin: 0 auto;
+}
+.itemLogo{
+  position: relative;
+}
+.itemLogo image:nth-child(1){
+  width: 25rpx;
+  height: 25rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-30%,-40%)
+}
+.itemLogo image:nth-child(2){
+  width:84rpx;
+  height:84rpx;
+  border-radius:50%;
+}
+.itemtext{
+  height:80rpx;
+  width: 250rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+  margin-left: 17rpx;
+}
+.itemtext .item_name{
+  font-size:30rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+}
+.itemtext .item_time{
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.itemRebate{
+  width: 120rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+  margin-left: 50rpx;
+}
+.itemRebate text{
+  display: block;
+  font-size: 26rpx;
+}
+.itemRebate .rebate_diamond{
+  color: #F52849;
+}
+.item_info{
+  height: 100%;
+  width: 80.5%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+.textNum{
+  display: flex;
+  text-align: center;
+}
+.numItem{
+  width:165rpx;
+  display: flex;
+  justify-content: center;
+  font-size: 46rpx;
+  color: #eee;
+}
+.inviteBtn{
+  width:500rpx;
+  height:90rpx;
+  background:linear-gradient(-60deg,rgba(11,40,163,1) 0%,rgba(0,26,136,1) 100%);
+  border-radius:45rpx;
+  box-shadow:10rpx 0rpx 20rpx rgba(11,40,163,0.2);
+  font-size:32rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 90rpx;
+  display: blcok;
+  margin: 0 auto;
+  margin-top: 60rpx;
+}
+.tipText{
+  width: 445rpx;
+  display: flex;
+  font-size: 26rpx;
+  color: #666;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 45rpx;
+  text-align: center;
+}
+/* 邀请码 */
+.inviteCode{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.invite_code{
+  width: 664rpx;
+  height: 910rpx;
+  margin: 0 auto; 
+}
+.saveInviteImage{
+  width:500rpx;
+  height:90rpx;
+  background:linear-gradient(-60deg,rgba(11,40,163,1) 0%,rgba(0,26,136,1) 100%);
+  border-radius:45rpx;
+  box-shadow:10rpx 0rpx 2r0px rgba(11,40,163,0.2);
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 90rpx;
+  display: blcok;
+  margin: 0 auto;
+}

@@ -1,0 +1,10 @@
+<view class="wx-popup">
+  <view class='popup-container'>
+    <image class='dialog-img' src="{{popup_img}}"></image>
+    <view class='title'>{{title}}</view>
+    <view class='action-line'>
+      <view class='yes-btn btn' bindtap='_error'>{{btn_no}}</view>
+      <view class='no-btn btn' bindtap='_success'>{{btn_ok}}</view>
+    </view>
+  </view>
+</view>

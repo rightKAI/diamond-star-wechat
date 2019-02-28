@@ -1,0 +1,172 @@
+/* pages/member/motherGift/motherGift.wxss */
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+}
+
+.container view image {
+    width: 100%;
+    display: block;
+}
+
+/* 活动说明 */
+
+.container .activityDescription .description {
+    display: block;
+    font-size: 42rpx;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
+    margin: 0rpx 0rpx 36rpx 0rpx;
+    text-align: center
+}
+
+.activityDescription .detailBox {
+    margin: 0rpx 77rpx 61rpx 76rpx;
+}
+
+.activityDescription .detailBox {
+    display: inline-block;
+    font-size: 26rpx;
+    text-align: left;
+    margin: 0 50rpx;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 26rpx;
+    display: flex;
+    justify-items: center;
+}
+
+/* 预约 */
+
+.content>image {
+    width: 100%;
+    height: 756rpx;
+}
+
+.content {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin-top: 61rpx;
+}
+
+.title{
+  position:absolute;
+  top:-34%;
+  width:690rpx;
+  height:30%;
+  left:50%;
+  background:#fff;
+  border-radius:20rpx;
+  transform:translateX(-50%);
+  box-shadow:1px 0px 10px rgba(0,26,136,0.2);
+}
+.appintmentBox{
+  width: 690rpx;
+  height: 52%;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius:20px 20px 0px 0px;
+  box-shadow:0rpx 0rpx 10rpx rgba(0,26,136,0.2);
+}
+
+.title .title_Shop {
+    font-size: 42rpx;
+    text-align: center;
+    margin-top: 50rpx;
+}
+
+.title .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rpx;
+    padding-left: 45rpx;
+    margin-top: 10rpx;
+}
+
+.title .details view {
+    font-size: 26rpx;
+    color: #000;
+    align-items: center;
+}
+
+.title .details .icon_01 {
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.appintmentBox input,
+.appintmentBox picker {
+    width: 500rpx;
+    height: 118rpx;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1rpx solid #e8e8e8;
+    text-align: center;
+    color: #333;
+    font-size: 30rpx;
+}
+
+.appintmentBox picker .picker {
+    width: 100%;
+    height: 100%;
+    line-height: 118rpx;
+    color: rgba(191, 191, 191, 1);
+}
+
+.placeholder_input {
+    color: #999;
+    font-size: 30rpx;
+}
+
+.btn {
+    width: 500rpx;
+    height: 90rpx;
+    background: linear-gradient(150deg, rgba(11, 40, 163, 1), rgba(0, 26, 136, 1));
+    box-shadow: 13rpx 0px 27rpx rgba(11, 40, 163, 0.3);
+    border-radius: 45rpx;
+    background-size: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50rpx;
+    text-align: center;
+    color: #fff;
+    line-height: 90rpx;
+}
+
+.chooseAnotherOne {
+    color: #001A88;
+    text-decoration: underline;
+    display: block;
+    width: 182rpx;
+    font-size: 26rpx;
+    margin: 0 auto;
+    margin-top: 47rpx;
+}
+
+.takeShow {
+    display: show;
+}
+
+.takeHide {
+    display: none;
+}
+
+.isAppintment {
+    width: 500rpx;
+    height: 90rpx;
+    text-align: center;
+    line-height: 90rpx;
+    background: linear-gradient(150deg, rgba(11, 40, 163, 1), rgba(0, 26, 136, 1));
+    border-radius: 45rpx;
+    box-shadow: 10rpx 0rpx 20rpx rgba(11, 40, 163, 0.2);
+    margin: 60rpx auto 111rpx auto;
+    color: rgba(255, 255, 255, 1);
+}

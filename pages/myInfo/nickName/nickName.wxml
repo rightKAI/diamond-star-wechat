@@ -1,0 +1,14 @@
+<!-- pages/myInfo/nickName.wxml -->
+<view class='container'>
+    <view style='height:30rpx;'></view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input btn-father">
+            <view class="weui-cell__bd">
+                <input class="weui-input" maxlength="12" bindinput='nameInput' value="{{nickName}}" focus placeholder="请输入昵称" />
+                <image class="btnDel" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/btn_wdxq_01.png" bindtap="setDel"></image>
+            </view>
+        </view>
+    </view>
+    <view style='height:60rpx;'></view>
+    <view class='sendAddress' bindtap='sendName'>确定</view>
+</view>

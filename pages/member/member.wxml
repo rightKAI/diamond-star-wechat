@@ -1,0 +1,32 @@
+<!--pages/member/member.wxml-->
+  <view class='borderTop'>
+  </view>
+  <view class='my-integral'>
+    <view bindtap='navigateFnc' data-url="/pages/member/myIntegral/myIntegral" class='leftInfo'>
+      <view class='integral'>{{memberInfo.integral || 0}}</view>
+      <text class='titletwo'>我的积分</text>
+    </view>
+    <view class='line_zw'>
+    </view>
+    <view bindtap='navigateFnc' data-url="/pages/member/myDiamond/myDiamond" class='leftInfo'>
+      <view class='integral'>{{memberInfo.diamond || 0}}
+        <text style='font-size:30rpx'>分</text>
+        <text class='titletwo'>我的钻石</text>
+      </view>
+    </view>
+    <view class='line'></view>
+    </view>
+    <!-- <view class='activity-page'>
+      <view wx:for="{{activityPage}}">
+        <view bindtap='navigateFnc' data-url="{{item.link}}">
+          <image src='{{item.imgurl}}'></image>
+          <text>{{item.subTitle}}</text>
+        </view>
+      </view>
+    </view> -->
+    <view class='DiamondChange'>
+      <text class='title'>钻石定制专区</text>
+      <view bindtap='navigateFnc' data-key="change" data-url="/pages/intoShop/intoShop?diamondChange=钻石兑换&activitySn=10001&app=true">
+        <image mode="widthFix"  wx:for='{{diamondChange}}' src="{{item.imgurl}}"></image>
+      </view>
+    </view>

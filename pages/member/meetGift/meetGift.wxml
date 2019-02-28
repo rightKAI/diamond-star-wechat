@@ -1,0 +1,36 @@
+<!-- pages/member/meetGift/meetGift.wxml -->
+<view class="container">
+    <view class="isShow">
+        <view class="firstPage">
+            <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/meet_gift/01.jpg"></image>
+        </view>
+        <view class="secondPage">
+            <image class="secondImg" mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/meet_gift/02.jpg"></image>
+            <view class="txt">
+                <text class="secondText">如果你已拥有甜蜜恋人</text>
+                <text class="secondText">牵手TA一起到店即可享有情侣对戒</text>
+            </view>
+            <view class="{{btngrey ? 'greyBtn' : 'takeActivity'}}" bindtap="takePart" wx:if="{{loveJudge == 0 || loveJudge == 1 || loveJudge == 3 || loveJudge == 5}}">
+                {{checkLove?"领取情侣礼":"绑定情侣"}}
+            </view>
+            <navigator class="takeActivity" hover-class="none" url="{{loveJudge == 2? '/pages/intoShop/intoShop?activitySn='+ activitySn : '/pages/appointment/appointment'}}" wx:elif="{{loveJudge==2 || loveJudge==4}}">
+            {{loveJudge == 2?"前往预约":"查看我的预约"}}</navigator>
+            <view class="greyBtn" wx:elif="{{loveJudge === 7}}">
+                您的爱人已预约
+            </view>
+            <view class="greyBtn" wx:else>
+                已领取
+            </view>
+        </view>
+        <view class="thirdPage" wx:if="{{!checkLove || loveJudge == 1 || loveJudge == 3 || loveJudge == 5}}">
+            <image class="thirdImg" mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/meet_gift/03.jpg"></image>
+            <view class="txt">
+                <text class="thirdText">珍贵的你，终会遇见真爱你的人</text>
+                <text class="thirdText">一份见面礼，一份爱的幸运</text>
+            </view>
+            <view class="greyBtn" wx:if="{{loveJudge===5}}">已完成</view>
+            <navigator class="takeActivity" hover-class="none" url="{{loveJudge == 1?'/pages/intoShop/intoShop?activitySn=10007':'/pages/appointment/appointment'}}" wx:elif="{{loveJudge==1 || loveJudge==3}}">{{loveJudge == 1?"前往预约":"查看我的预约"}}</navigator>
+            <button class="takeActivity" wx:else bindtap="getOneGift">领取单身礼</button>
+        </view>
+    </view>
+</view>

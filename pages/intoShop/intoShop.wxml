@@ -1,0 +1,27 @@
+<!-- pages/intoShop/intoShop.wxml -->
+<view class='container'>
+  <view class='content'>
+    <image class='bg' mode="widthFix" src="{{diamondChange?'http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/img_hyqy_02.png':storeInfo.store.imgUrl}}"></image>
+    <view class='appintmentBox'>
+    <view class='title'>
+      <view class='title_Shop'>{{storeInfo.store.name}}</view>
+      <view class='details'>
+        <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/time.png' class='icon_01'></image>
+        <view>{{storeInfo.store.openTime}}-{{storeInfo.store.closeTime}}（节假日营业）</view>
+        <view>已有 {{storeInfo.appointmentCount}} 人预约</view>
+      </view>
+    </view>
+    <form bindsubmit='commit'>
+      <input placeholder='您希望我们怎么称呼您' value="{{appintmentName}}"  name='nickName' placeholder-class="placeholder_input"></input>
+      <input type='number' placeholder='手机号码' name='phoneNumber' maxlength='11' placeholder-class="placeholder_input"></input>
+      <picker mode="date"  value="{{appointmentDate}}" bindchange="appointmentDate">
+        <input name="appointmentDate" disabled='disabled' decode="true" value="{{appointmentDate}}" placeholder="请输入日期"></input>
+      </picker>
+      <button class='btn' form-type='submit'>预约进店</button>
+    </form>
+      <navigator hover-class='none' url="/pages/shopList/shopList">
+        <text  class='chooseAnotherOne'>选择其他门店></text>
+      </navigator>
+    </view>
+  </view>
+</view>

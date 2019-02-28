@@ -1,0 +1,80 @@
+<!-- pages/member/myIntegral/myIntegral.wxml -->
+<view class="container">
+    <view class="content-top">
+        <text class="viewRule" bindtap="showPop">查看规则</text>
+        <view class="center">
+            <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_hyqy_02.png"></image>
+            <text class="grade">{{integral}}</text>
+            <text class="fen">分</text>
+        </view>
+    </view>
+    <view class="content-bottom">
+        <block wx:for="{{list}}" wx:key="id">
+            <view class="detailList">
+                <text class="dot"></text>
+                <text class="registerFree">{{item.title}}</text>
+                <text class="add">{{item.integerCount}}</text>
+                <view class="dataBox">
+                    <text class="data">{{item.createTime}}</text>
+                </view>
+                <text class="line"></text>
+            </view>
+        </block>
+        <!-- <view class="detailList">
+            <text class="dot"></text>
+            <text class="registerFree">钻石兑换</text>
+            <text class="add">-5</text>
+            <view class="dataBox">
+                <text class="data">2018-03-23</text>
+            </view>
+            <text class="line"></text>
+        </view>
+        <view class="detailList">
+            <text class="dot"></text>
+            <text class="registerFree">注册赠送</text>
+            <text class="add">+5</text>
+            <view class="dataBox">
+                <text class="data">2018-03-23</text>
+            </view>
+            <text class="line"></text>
+        </view> -->
+    </view>
+    <scroll-view class="rulesDetail" hidden="{{flag}}" >
+        <view class="detail">
+            <text class="detailTop">积分规则</text>
+            <view class='text_detail'>
+              <view class="detailBox">
+                <text>1、</text>
+                <text>每天登录玛丽莱星球签到可获赠1积分；</text>
+              </view>
+              <view class="detailBox">
+                  <text>2、</text>
+                  <text>您成功邀请一名好友可获得10积分，最高累计可获得100积分；</text>
+              </view>
+              <view class="detailBox">
+                  <text>3、</text>
+                  <text>邀请的好友填写手机号完成领钻即邀请成功；</text>
+              </view>
+              <view class="detailBox">
+                  <text>4、</text>
+                  <text>您在门店或官网每消费满20元，获得1积分，</text>
+              </view>
+              <view class="detailBox">
+                  <text>5、</text>
+                  <text>您邀请的好友每消费满50元，获得1积分，上不封顶；</text>
+              </view>
+              <view class="detailBox">
+                  <text>6、</text>
+                  <text>您积分可在玛丽莱星球积分兑换区上线后开启兑换；</text>
+              </view>
+              <view class="detailBox">
+                  <text>7、</text>
+                  <text>本权益最终解释权归玛丽莱所有。</text>
+              </view>
+            </view>
+            <view class='bottom_area'>
+             <view class="detailBtn" bindtap="hide">确定</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

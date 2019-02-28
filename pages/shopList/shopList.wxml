@@ -1,0 +1,45 @@
+<!--pages/shopList/shopList.wxml-->
+<view class='container_mine'>
+    <view class='nav'>
+      <view bindtap='selectThis' data-key="{{0}}" class='{{flagNav?"select":""}}'>全部门店</view>
+      <view bindtap='selectThis' data-key="{{1}}" class='{{!flagNav?"select":""}}'>城市筛选</view>
+    </view>
+</view>
+
+  <!--城市筛选 -->
+  <view class='' hidden='{{flagNav}}'>
+      <view class='pol_bg'>
+        <view class='cityListBox'>
+          <view style='padding:0 50rpx;'>
+              <view class='btnClose' bindtap='closeShaixian'><image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/icon/ICON-WebChar/me/goods/pay_clost.png'></image></view>
+              <view style='max-height:600rpx; overflow: auto;'> 
+                  <view class='cityStore xian'>当前位置：<text>{{city}}</text></view>
+                  <view class='cityconcen'>
+                      <view class='pull_header'>热门城市</view>
+                      <view class='pull_text cityText'>
+                          <text class="{{currentItem==''?'on':''}}" bindtap='allBtn'>全部</text>
+                          <text wx:for='{{cityList}}' data-name='{{item.name}}' data-id='{{item.id}}' class="{{currentItem==item.id?'on':''}}" bindtap='cityBtn'>{{item.name}}</text>
+                      </view>
+                  </view>
+              </view>
+
+              <view class='btnBox' bindtap='subit'>确定</view>
+           </view>
+        </view>
+      </view>
+  </view>
+  <!-- 门店板块 -->
+<view class='content'>
+  <view class='store_item' wx:for="{{storeList}}">
+    <image class='shop_img' src='{{item.imgUrl}}'></image>
+    <view class='detail' >
+      <view class='title'>{{item.name}}</view>
+      <view class='action_appointment' data-id="{{item.id}}" bindtap="appointment">预约进店 ></view>
+      <view class='address_detail'>{{item.address}}</view>
+      <view class='time_str'>
+        <image class='time_icon' src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/time.png' ></image>
+        <view>{{item.openTime}}-{{item.closeTime}}（节假日营业）</view>
+      </view>
+  </view>
+  </view>
+</view>

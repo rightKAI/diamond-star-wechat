@@ -1,0 +1,80 @@
+<!-- pages/myInfo/myInfo.wxml -->
+<view class='container'>
+  <view class='userInfo'>
+    <view class='userLogo'>
+      <text class='title_scond'>头像</text>
+      <view>
+        <image class='userLogo_01 userLogo' src='{{userInfo.iconUrl||"https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/logo.png"}}'></image>
+      </view>
+    </view>
+    <view class='userLogo userInfo_normalLine'>
+      <text class='title_scond'>昵称</text>
+      <navigator hover-class="none" url="/pages/myInfo/nickName/nickName?nickName={{nickName}}">
+        <text class='userInfo_text'>{{nickName}}</text>
+        <image mode="widthFix" class='icon_next' src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_next.png'></image>
+      </navigator>
+    </view>
+    <view class='userLogo userInfo_normalLine'>
+      <text class='title_scond'>性别</text>
+      <view bindtap="open">
+        <text class='userInfo_text'>{{sex ? sex : '请选择性别'}}</text>
+        <image mode="widthFix" class='icon_next' src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_next.png'></image>
+      </view>
+    </view>
+    <view class='userLogo userInfo_normalLine'>
+      <text class='title_scond'>绑定手机号</text>
+      <navigator hover-class="none">
+        <view>
+          <text class='userInfo_text userInfo_phone'>{{mobile ? mobile:"未绑定手机号"}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='blank'></view>
+  <view wx:if="{{loveName}}" class='userInfo noLine'>
+    <view class='userLogo userInfo_normalLine noLine'>
+      <text class='title_scond'>我的爱人</text>
+      <view>
+        <text class='userInfo_text userInfo_name'>{{loveName}}</text>
+      </view>
+    </view>
+    <view class='userLogo userInfo_normalLine'>
+      <text class='title_scond'>TA的电话</text>
+      <view>
+        <text class='userInfo_text userInfo_herPhone'>{{loveMobile}}</text>
+      </view>
+    </view>
+    <view class='userLogo userInfo_normalLine'>
+      <text class='title_scond'>TA的生日</text>
+      <view>
+        <!-- <picker class="weui-btn" mode="date" value="{{birthday}}"  bindchange="bindDateChange"> -->
+          <text class='userInfo_text'>{{birthday}}</text>
+        <!-- </picker> -->
+        <!-- <image mode="widthFix" class='icon_next' src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_next.png'></image> -->
+      </view>
+    </view>
+    <view class='userLogo userInfo_normalLine'>
+      <text class='title_scond'>我们的结婚纪念日</text>
+      <view>
+        <picker class="weui-btn" mode="date" value="{{marry_day}}" bindchange="marryDayChange">
+          <text class='userInfo_text'>{{marry_day? marry_day:'请选择结婚纪念日'}}</text>
+        </picker>
+        <image mode="widthFix" class='icon_next' src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_next.png'></image>
+      </view>
+    </view>
+    <view class='userLogo userInfo_normalLine bottom-line'>
+      <text class='title_scond'>宝宝出生纪念日</text>
+      <view>
+        <picker class="weui-btn" mode="date" value="{{baby_birthday}}"  bindchange="babyBirthDayChange">
+          <text class='userInfo_text'>{{baby_birthday?baby_birthday:'请选择宝宝生日'}}</text>
+        </picker>
+        <image mode="widthFix" class='icon_next' src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/icon_next.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='bind' wx:else>
+    <navigator hover-class='none' url="/pages/myLover/myLover">
+      绑定情侣
+    </navigator>
+  </view>
+</view>

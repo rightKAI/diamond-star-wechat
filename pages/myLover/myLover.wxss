@@ -1,0 +1,42 @@
+/* pages/myLover/myLover.wxss */
+.banner{
+  width: 100%;
+}
+.bottomForm{
+  position: absolute;
+  width: 690rpx;
+  height: 54%;
+  background: #fff;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius:20rpx 20rpx 0rpx 0rpx;
+  box-shadow:2rpx 0rpx 10rpx rgba(105,114,227,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.bottomForm input{
+  width: 500rpx;
+  height: 120rpx;
+  border-bottom: 1rpx solid #eee;
+  text-align: center;
+  font-size: 30rpx;
+  color: black;
+}
+.bindBtn{
+  font-size: 32rpx;
+  color: #fff;
+  width:500rpx;
+  height:90rpx;
+  background:linear-gradient(-60deg,rgba(11,40,163,1) 0%,rgba(0,26,136,1) 100%);
+  border-radius:45rpx;
+  box-shadow:10rpx 0rpx 20rpx rgba(11,40,163,0.2);
+  text-align: center;
+  line-height: 90rpx;
+  margin-top: 50rpx;
+}
+.colorGrey{
+  color: #bfbfbf;
+}

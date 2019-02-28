@@ -1,0 +1,24 @@
+/* pages/myInfo/uPhone.wxss */
+
+.contanier {
+    overflow: hidden;
+}
+
+.mobileInput {
+    margin: 15rpx 0rpx 60rpx 0rpx;
+}
+
+.sendHerPhone {
+    width: 300rpx;
+    height: 70rpx;
+    display: blcok;
+    margin: 0 auto;
+    background: linear-gradient(150deg, rgba(11, 40, 163, 1), rgba(0, 26, 136, 1));
+    border-radius: 35rpx;
+    box-shadow: 13rpx 0px 27rpx rgba(11, 40, 163, 0.3);
+    background-size: 100%;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 70rpx;
+}

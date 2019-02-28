@@ -1,0 +1,21 @@
+<!--pages/activity/guide/guide.wxml-->
+<view class='activityContent'>
+  <image mode="widthFix" src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/guide/guide1.jpg'></image>
+  <image mode="widthFix" src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/guide/guide2.jpg'></image>
+  <view class='item'>
+    <image mode="widthFix" src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/guide/guide3.jpg'></image>
+    <navigator hover-class='none' url="/pages/member/meetGift/meetGift?activitySn=10007" class='btn'>领取见面礼</navigator>
+  </view>
+  <view class='item'>
+    <image mode="widthFix" src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/guide/guide4.jpg'></image>
+    <navigator hover-class='none' url="/pages/member/caratGift/caratGift?activitySn=10006" class='btn' style="bottom:9%">领取克拉礼</navigator>
+  </view>
+  <view class='item'>
+    <image mode="widthFix" src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/guide/guide5.jpg'></image>
+    <navigator hover-class='none' url="/pages/member/motherGift/motherGift?activitySn=10005" class='btn'>领取妈妈礼</navigator>
+  </view>
+  <view class='item'>
+    <image mode="widthFix" src='http://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/guide/guide6.jpg'></image>
+    <navigator hover-class='none' url="/pages/member/babyGift/babyGift?activitySn=10008" class='btn' style="bottom:28%">领取宝宝礼</navigator>
+  </view>
+</view>

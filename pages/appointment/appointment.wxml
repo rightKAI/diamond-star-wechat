@@ -1,0 +1,38 @@
+<!--pages/appointment/appointment.wxml-->
+<view class='container'>
+  <view class='content' wx:if="{{appointmentList.length>=1}}" >
+      <view wx:for="{{appointmentList}}" class='appintment_card {{item.cardState? "" : "disabledCard"}}'>
+      <view class='sotre_bg'>
+        <image mode="widthFix" src='{{item.img_url}}'></image>
+        <text class='shop_name'>{{item.name}}</text>
+        <view class='sotre_bg_shadow'></view>
+      </view>
+      <view class='appintment_time'>
+        您的预约时间 {{item.appointDate}} {{item.hour_region}}
+      </view>
+      <view class='appointment_detail_box'>
+        <view class='appointment_detail marginzero'>门店地址：{{item.address}}</view>
+        <view class='appointment_detail'>门店电话：{{item.tel}}</view>
+        <view wx:if="{{item.exchangeSn}}" class='appointment_detail {{item.cardState? "colorRed" : ""}}'>兑换码：{{item.exchangeSn}}　　　</view>
+      </view>
+      <view  class='action'>
+        <view wx:if="{{item.cardState}}" class='cancel_appointment' data-id="{{item.id}}" bindtap='cancelAppointment'>
+          取消预约
+        </view>
+        <view wx:if="{{!item.cardState}}" class='disabledBtn' data-id="{{item.id}}" >
+          {{item.appointmentState}}
+        </view>
+        <view wx:if="{{item.cardState}}" bindtap='getAddress' data-index="{{index}}" data-status="{{item.status}}" data-storeid="{{item.storeId}}" data-exchangeSn="{{item.exchangeSn}}" data-phone="{{item.phone}}" class='comeTo_appointment {{item.status !== 1?item.status !== 2 ?"disabledBtn" : "":""}}'> 
+          {{sendAddress[index]}}
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class='emptyPage' wx:if="{{appointmentList.length<1}}">
+      <image src=''></image>
+      <text class='bigText'>您还没有预约哦</text>
+      <text class='normalText'>不约，怎么会有故事！等你来约哦~</text>
+      <navigator class='appointment_btn' hover-class='none' url="/pages/intoShop/intoShop?diamondChange=钻石兑换&activitySn=10001">预约进店</navigator>
+  </view>
+</view>

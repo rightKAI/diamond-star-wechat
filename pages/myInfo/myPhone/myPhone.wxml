@@ -1,0 +1,11 @@
+<!-- pages/myInfo/myPhone.wxml -->
+<view class='container'>
+    <view class="weui-cells weui-cells_after-title mobileInput">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+                <input type="text" maxlength="11" bindinput="mobileInput" class="weui-input" placeholder="请输入手机号" />
+            </view>
+        </view>
+    </view>
+    <view class='sendPhone' bindtap="btnClick">确定</view>
+</view>

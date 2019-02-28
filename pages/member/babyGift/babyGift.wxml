@@ -1,0 +1,48 @@
+<!-- pages/member/babyGift/babyGift.wxml -->
+<view class="container">
+    <view class="firstPage">
+        <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/baby_gift/01.jpg"></image>
+    </view>
+    <view class="secondPage">
+        <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/baby_gift/02.jpg"></image>
+    </view>
+    <view class="thirdPage">
+        <image mode="widthFix" src="https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/baby_gift/03.jpg"></image>
+    </view>
+    <view class="activityDescription">
+        <text class="description">活动说明</text>
+        <view class="detailBox" wx:for="{{description}}">
+            <text>{{index+1}}、</text>
+            <text>{{item}}</text>
+        </view>
+    </view>
+    <view class="content" wx:if="{{!isAppintment && checkLove}}">
+        <image mode="widthFix" src='{{img_url}}'></image>
+        <view class='appintmentBox'>
+        <view class='title'>
+            <view class='title_Shop'>{{title_Shop}}</view>
+            <view class='details'>
+              <view>
+                <image src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/time.png' class='icon_01'></image>
+                <text>{{openTime}}-{{closeTime}}（节假日营业）</text>
+              </view>
+                <view style='font-size:26rpx;'>已有 {{appointmentCount}} 人预约</view>
+            </view>
+        </view>
+            <input name="nickName" bindinput="username" placeholder='您希望我们怎么称呼您' placeholder-class="placeholder_input"></input>
+            <input name='phone' bindinput="phone" maxlength='11' type='number' placeholder='手机号码' placeholder-class="placeholder_input"></input>
+            <picker mode="date"  value="{{appointmentDate}}" bindchange="appointmentDate">
+                <input disabled='disabled' name="appointmentDate" decode="true" value="{{appointmentDate}}" placeholder="请输入日期"></input>
+            </picker>
+            <view class='btn' bindtap="send">预约进店</view>
+            <navigator hover-class='none' url="/pages/shopList/shopList">
+                <text class='chooseAnotherOne'>选择其他门店></text>
+            </navigator>
+        </view>
+    </view>
+    <view class="isAppintment" wx:elif="{{isAppintment && loveJudge !== 8}}" bind:tap="appintmentList">查看我的预约列表</view>
+    <view class='isAppintment greyBtn' wx:elif="{{loveJudge === 8}}">您的爱人已预约</view>
+    <view class='isAppintment' wx:else>
+      <navigator hover-class='none' url="/pages/myLover/myLover">绑定恋人 开启权益</navigator>
+    </view>
+</view>

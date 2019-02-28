@@ -1,0 +1,25 @@
+<view class='container'>
+  <view class='content'>
+  <form bindsubmit='searchBox'>
+      <view class='addBox'>
+        <view class='inputBox'>
+          <input placeholder-style="color:#bfbfbf;" value="{{userName}}" name="userName"  placeholder='收货人'></input>
+          <view class='delete'  bindtap='clearContent' data-bind="1"></view>
+        </view>
+        <view class='inputBox'>
+          <input placeholder-style="color:#bfbfbf;" name="phoneNumber" maxlength='11' value="{{phoneNumber}}" type='number' placeholder='手机号码'></input>
+          <view  class='delete' bindtap='clearContent' data-bind="2"></view>
+        </view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+          <view class='addressChoose {{dateFlag? "active" : ""}}'>
+            <text>所在地区</text>
+            <text wx:for="{{region}}">{{item}}</text>
+          </view> 
+        </picker>
+        <textarea placeholder-style="color:#bfbfbf;" value="{{addressDetail}}"  name="address_detail" class='address_detail' placeholder='详细地址：如街道、门牌号、楼栋号、单元室等'>
+        </textarea>
+      </view>
+      <button class='addBtn' form-type='submit'>保存</button>
+     </form>
+  </view>
+</view>

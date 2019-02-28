@@ -1,0 +1,90 @@
+/* pages/myInfo/myInfo.wxss */
+
+.userInfo {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 0 30rpx;
+  border-top: 1px solid #dcdcdd;
+  box-sizing: border-box;
+}
+
+.userLogo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 169rpx;
+  align-items: center;
+}
+.bind{
+  width:500rpx;
+  height:90rpx;
+  display:blcok;
+  margin:0 auto;
+  margin-top: 30rpx;
+  background:linear-gradient(150deg, rgba(11, 40, 163, 1), rgba(0, 26, 136, 1));
+  border-radius:45rpx;
+  box-shadow:10rpx 0rpx 20rpx rgba(11, 40, 163, 0.2);
+  background-size:100%;
+  font-size:30rpx;
+  color:#fff;
+  text-align:center;
+  line-height:90rpx;
+}
+.userLogo view {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.userLogo .userLogo_01 {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+
+.userLogo .icon_next {
+  width: 13rpx;
+  height: auto;
+}
+
+.title_scond {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.userInfo_text {
+  font-size: 30rpx;
+  color: rgba(153, 153, 153, 1);
+  vertical-align: top;
+  margin-right: 30rpx;
+}
+
+.userInfo_phone,
+.userInfo_name,
+.userInfo_herPhone {
+  margin-right: 0rpx;
+}
+
+.userInfo_normalLine {
+  height: 100rpx;
+  border-top: 1rpx solid #e8e8e8;
+}
+
+.blank {
+  height: 20rpx;
+  width: 100%;
+  background: #f5f7fd;
+}
+
+.noLine {
+  border: none;
+}
+
+.bottom-line {
+  border-bottom: 1rpx solid #e8e8e8;
+}
+
+.radio-group {
+  display: none;
+}

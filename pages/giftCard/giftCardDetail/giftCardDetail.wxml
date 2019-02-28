@@ -1,0 +1,49 @@
+<!--pages/giftCard/giftCardDetail/giftCardDetail.wxml-->
+<view class='container'>
+  <view class='content'>
+    <image class='top_banner' src='{{activityContent.bigImg}}'></image>
+    <view class='activity_detail'>
+      <view class='title'>活动说明</view>
+      <view class='detail' wx:for="{{detailList}}">
+        <text>{{index+1}}、</text>
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view wx:if="{{isAppointment}}">
+      <view class='card_item' style='background-image: url("{{activityContent.viewImg}}")'>
+        <view class='card_right'>
+          <view class='card_name'>{{activityContent.content}}</view>
+            <view class='card_num'>兑换码 {{num}}</view>
+          </view>
+        </view>
+        <navigator hover-class='none' url="{{'/pages/intoShop/intoShop?activitySn='+ optionsUrl.activitySn + '&giftCard=' + true + '&interactId=' + optionsUrl.interactId}}" class='getGift_btn'> 预约进店 兑换礼物</navigator>
+    </view>
+    <view class='appintment_card {{!cardState? "disabledCard" : ""}}' wx:if="{{!isAppointment}}" >
+      <view class='sotre_bg'>
+        <image mode="widthFix" src='{{storeData.img_url}}'></image>
+        <text class='shop_name'>
+        {{storeData.name}}</text>
+        <view class='sotre_bg_shadow'></view>
+      </view>
+      <view class='appintment_time'>
+        您的预约时间 {{storeData.createTime}}
+      </view>
+      <view class='appointment_detail_box'>
+        <view class='appointment_detail marginzero'>门店地址：{{storeData.address}}</view>
+        <view class='appointment_detail'>门店电话：{{storeData.tel}}</view>
+        <view class='appointment_detail colorRed'>兑换码：{{storeData.exchangeSn}}</view>
+      </view>
+      <view class='action'>
+        <view wx:if="{{cardState}}" data-id="{{storeData.id}}" bindtap='cancelAppointment' class='cancel_appointment'>
+          取消预约
+        </view>
+        <view wx:if="{{!cardState}}" class='disabledBtn' data-id="{{storeData.id}}" >
+          {{appointmentState}}
+        </view>
+        <view wx:if="{{cardState}}" class='comeTo_appointment' bindtap='sendAddress'> 
+          {{sendText}}  
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

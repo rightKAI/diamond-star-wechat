@@ -1,0 +1,133 @@
+/**app.wxss**/
+@import 'weui.wxss';
+view{
+  box-sizing: border-box;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background: #F6F8FE;
+  box-sizing: border-box;
+} 
+.container3 {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  border-top: 1rpx solid #cdcdcd;
+} 
+.container2 {
+  min-height: 100vh;
+  width: 100%;
+  background: #F6F8FE;
+  border-top: 1rpx solid #cdcdcd;
+  box-sizing: border-box;
+} 
+.container1 {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  border-top: 1rpx solid #fefefe;
+} 
+image{
+  vertical-align: middle;
+}
+/* 空状态样式 */
+.emptyPage{
+  border-top: 1rpx solid #cdcdcd;
+}
+.emptyPage image{
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100rpx;
+}
+.appointment_btn{
+  width:300rpx;
+  height:70rpx;
+  background:linear-gradient(150deg,rgba(11,40,163,1),rgba(0,26,136,1));
+  border-radius:35rpx;
+  box-shadow:10rpx 0rpx 20rpx rgba(11,40,163,0.2);
+  display: block;
+  margin: 0 auto;
+  margin-top: 62rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 70rpx;
+}
+.bigText{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size:46rpx;
+    font-family:PingFang-SC-Bold;
+    color:rgba(191,191,191,1);
+    margin-top: 50rpx;
+}
+.normalText{
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(191,191,191,1);
+  display: block;
+  text-align: center;
+  margin-top: 25rpx;
+}
+/* confirm弹窗 */
+.shade{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0,0,0,.7);
+  top: 0;
+  left:0;
+}
+.shade_content{
+  position: absolute;
+  width: 600rpx;
+  height: 560rpx;
+  background: #fff;
+  top: 265rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 60rpx 42rpx 0 42rpx;
+}
+.shade_icon{
+  width: 180rpx;
+  height: 180rpx;
+  display: block;
+  margin: 0 auto;
+}
+.shade .title{
+  font-size: 36rpx;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+.title2{
+  font-size: 30rpx;
+  text-align: center;
+}
+.action{
+  height: 70rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60rpx;
+}
+.action view{
+  width:240rpx;
+  height:70rpx;
+  box-sizing: border-box;
+  background:linear-gradient(-60deg,rgba(11,40,163,1) 0%,rgba(0,26,136,1) 100%);
+  border-radius:35rpx;
+  box-shadow:10rpx 0rpx 20rpx rgba(11,40,163,0.2);
+  text-align: center;
+  color: #fff;
+  line-height: 70rpx;
+}

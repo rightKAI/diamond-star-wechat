@@ -1,0 +1,13 @@
+<view class='container'>
+  <view class='content'>
+      <view class='card_item {{item.cardState === 2 || !item.isMaturity? "greyCard" : ""}}' wx:for="{{giftCardList}}">
+        <image src='{{item.status === 2? item.use_picture : item.view_img}}'></image>
+        <view class='card_right'>
+          <text class='card_title'>{{item.title}}</text>
+          <text class='card_detail {{item.cardState=== 1? "colorRed" : ""}}'>{{item.cardState=== 1? "您已预约  "+item.appointtime : item.content}}</text>
+          <view wx:if="{{item.cardState === 0 || item.cardState === 1}}" data-id="{{item.id}}" data-activitysn="{{item.activity_sn}}" data-cardState="{{item.cardState}}" class='use_btn' data-cardName="{{item.title}}" bindtap='useCard' data-interactid="{{item.interactId}}" data-activitycontentid="{{item.activityContentId}}" data-isMaturity="{{item.isMaturity}}" data-activityId="{{item.activityGoodsTypeId}}" >{{item.cardState === 0 ? "立即使用" : item.cardState=== 1? "查看详情" : ""}}</view>
+          <view wx:elif="{{item.cardState === 2}}" class='use_btn greyBtn'>已使用</view>
+        </view>
+      </view>
+  </view>
+</view>

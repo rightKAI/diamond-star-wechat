@@ -1,0 +1,27 @@
+
+<view class='container'>
+  <view class='contant'>
+    <view class='address_card' wx:for="{{addressList}}">
+      <view>
+        <view class='title'>
+          <text class='name'>{{item.userName}}</text>
+          <text class='phone'>{{item.phone}}</text>
+        </view>
+        <view class='address'>
+          <text>{{item.provinceName}}</text>
+          <text>{{item.cityName}}</text>
+          <text>{{item.areaName}}</text>
+          <text class='address_01'>{{item.address}}</text>
+        </view>
+      </view>
+      <view class='view_two' bindtap='updateAddress' data-addressInfo="{{item.id}}" >
+        <image mode="widthFix" src='https://img-dmallovo.oss-cn-shenzhen.aliyuncs.com/yx_applet/images/edit.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='bottomBox'>
+    <navigator hover-class="none" url="/pages/address/addAddress/add" class='addBtn'>
+     添加新地址
+    </navigator>
+  </view>
+</view>
